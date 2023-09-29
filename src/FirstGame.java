@@ -91,6 +91,8 @@ public class FirstGame {
 //        InCorrect yeniden girin.sonra +min+" - "+max evezine (0,3)- de deye bilerik
 //        if-den sonraki mesaji catch-den sorada vere bilerdik ama men 0 ve 3 den ferqli reqem girersede xeta olar deye
 //        sonda oranida yoxlasin mesaji versin deye orda yazdim
+
+        
 //        We have written a method that accepts numbers between 0 and 3, here is the mission of this method called integerRead
     //    Integer should be read, otherwise, if another value is entered, it should be corrected. There are 2 variables, min and max// We declare the scanner here because we will do the reading here and check if it is correct
 //        boolean reading We say ok, we give false at the beginning, because no one has read it yet.
