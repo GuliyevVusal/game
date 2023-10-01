@@ -16,18 +16,9 @@ public class FirstGame {
 //    I will keep it in do while to keep the game spinning continuously.
 //    Oyunun daima dovr etmesi ucun Do while icerisinde edecik
         do {
-//      computerin secimi 1-3 arasinda secim edecek deye Math.random() reqemler versin bunu bilirik ki random
-//      burda 0 ile 1 arasinda reqem derc edecek men bunu 1-3 arasinda etmesi ucun *3+1 deyirem
-//      Let Math.random() give numbers so that the computer will choose
-//      between 1-3. We know that random will type a number between 0 and 1
-//      I say *3+1 to make it between 1-3.
             computerChoice = (int) (Math.random() * 3 + 1);
             System.out.print("Enter Your Choice = ");
             playerChoice = integerRead(0, 3);
-//       Burda secimi cap edirdik bu secimi asagida Choice[]-ne index edirik.Yeni secim 2 deye
-//       yox Choice[]-nin 2-ci elementi kimi gosterecek String bir ifade yazmis olacaq
-//       Here we are making the selection and we are indexing this selection to Choice [] below
-//       The new choice will show as the 2nd element of Choice[ ] instead of 2 String will have typed an expression
             System.out.print("ComputerChoice = " + red + Choice[computerChoice] + resetColor);
             System.out.println("  PlayerChoice = " + red + Choice[playerChoice] + resetColor);
 //      Secimleri etdik indi kimin qalib geldiyini bilmeliyik
@@ -51,7 +42,7 @@ public class FirstGame {
         } while (playerChoice != 0);
 
 //    The player will choose between 1 and 3. If he chooses 0 he will leave the game.
-//        Oyuncu 1-3 arasnda secim edecek bilirik eger 0 secse oyundan cixsin
+//        Oyuncu 1-3 arasnda secim edecek eger 0 secse oyundan cixacaq
 
         if (numberOfComputerWin == numberOfPlayerWin) System.out.print("Draw");
         else if (numberOfComputerWin > numberOfPlayerWin) System.out.print("Computer Win");
@@ -76,6 +67,15 @@ public class FirstGame {
             }
         } while (!readingOk || number < min || number > max);
         return number;
+//     computerin secimi 1-3 arasinda secim edecek deye Math.random() reqemler versin bunu bilirik ki random
+//      burda 0 ile 1 arasinda reqem derc edecek men bunu 1-3 arasinda etmesi ucun *3+1 deyirem
+//      Let Math.random() give numbers so that the computer will choose
+//      between 1-3. We know that random will type a number between 0 and 1
+//      I say *3+1 to make it between 1-3.
+//      secimi cap edirdik bu secimi Choice[]-ne index edirik.Yeni secim 2 deye
+//       yox Choice[]-nin 2-ci elementi kimi gosterecek String bir ifade yazmis olacaq
+//       Here we are making the selection and we are indexing this selection to Choice [] below
+//       The new choice will show as the 2nd element of Choice[ ] instead of 2 String will have typed an expression
 //        0 la 3 arasindaki reqemleri qebul eden bir metod yazdiq burda integerRead adinda bu metodun misyasi
 //        Integer oxumaqdir eks halda basqa deyer girildiyinde bunu duzeltmekdir 2 deyiskeni var min ve max
 //        Scanneri burda elan edirik cunki oxumaq isini burda edecik ve dogru olub olmadigini yoxlamaq ucun
@@ -85,8 +85,8 @@ public class FirstGame {
 //        yeni min-dan kicik olmasin max-dan boyuk olmasin yeni 0,1,2,3 qebul etsin basqa hecne qebul etmesin.
 //        ve return olaraqda number gonderdik.
 //        try { numberi oxuyacaq Integer.parseInt(sc.nextLine()); onu Integere cevirecik
-//        eger oxuma dogrudursa davam edecek proqramin kodu yeni readingOk = true; oxumaq basarili olub yeni (a,b)
-//        herfine basilmamisdir.Eks halda basarisizsa catch ile tutaciq onu (NumberFormatException e)
+//        eger oxuma dogrudursa davam edecek proqramin kodu yeni readingOk = true; oxumaq basarili olub yeni (a,b) v.s
+//        herfe basilmamisdir.Eks halda basarisizsa catch ile tutaciq onu (NumberFormatException e)
 //        catch dan sonra if ( number < min-dan ve-ya number > max-dan ve-ya readingOk deyilse gel deki
 //        InCorrect yeniden girin.sonra +min+" - "+max evezine (0,3)- de deye bilerik
 //        if-den sonraki mesaji catch-den sorada vere bilerdik ama men 0 ve 3 den ferqli reqem girersede xeta olar deye
